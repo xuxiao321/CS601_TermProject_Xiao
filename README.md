@@ -13,9 +13,9 @@ This is the hometown page. Here, you can learn about the culture and history of 
 The last page is the contact page. I created a form in HTML with inputs for name, email, phone, and a textarea for the message. These inputs are designed to capture user information. I also used validation attributes like required and pattern to make sure the inputs are correct before submission. In order to send the email, i built a function through smtp.js library. This function is triggered by submission. 
 
 
-js, vue, template strings in hometown.html, hometown.js
-dom, js, validation, in contact.html, conact.js
-gengeral js functions(fade-out effect, real-time clock) in script.js
-Responsive Design(Media queries are employed for different screen sizes), animation. fade-out effect in mystyle.css
-hyperlink in index.html, interest.html
-list, table in profile.htmla
+# js, vue, template strings in hometown.html, hometown.js
+# dom, js, validation, in contact.html, conact.js
+# gengeral js functions(fade-out effect, real-time clock) in script.js
+# Responsive Design(Media queries are employed for different screen sizes), animation. fade-out effect in mystyle.css
+# hyperlink in index.html, interest.html
+# list, table in profile.html
