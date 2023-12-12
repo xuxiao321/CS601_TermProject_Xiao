@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hometown China</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hometown</h1>
+        <div class="time"><span id="current-time"></span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="interest.html">Interest</a></li>
+                <li><a href="hometown.html">Hometown</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="chinaApp">
+        <section class="intro-section">
+            <h2>Welcome to China</h2>
+            <p>Discover the rich heritage, diverse cultures, and fast-paced development of China. Explore the scenic
+                beauty, the traditional cuisines, bustling cities, and ancient traditions that make China unique.</p>
+        </section>
+
+        <section class="gallery-section">
+            <h2>Gallery</h2>
+            <div v-for="item in galleryItems" class="gallery-item">
+                <img :src="item.image" :alt="item.title">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="hometown.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

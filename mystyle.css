@@ -1,0 +1,314 @@
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the body element */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(image/portfolio-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+/* Styling for the main content container */
+main {
+    max-width: 1600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-image: url(image/main-background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Styling for sections within the main container */
+main section {
+    margin-bottom: 20px;
+}
+
+/* Styling for heading tags within the main container */
+main h2 {
+    color: #f35517;
+    margin-bottom: 20px;
+}
+
+/* Styling for heading tag within the header */
+header h1 {
+    text-align: center;
+    color: #04f84d;
+}
+
+/* Styling for paragraph elements */
+p {
+    text-align: left;
+    font-size: 1.2em;
+}
+
+/* Styling for navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for navigation links */
+.nav-links {
+    font-size: 1.5em;
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(59, 132, 241);
+}
+
+.nav-links a:hover {
+    color: rgb(5, 232, 248);
+}
+
+/* Styling for generic links */
+a {
+    color: rgb(0, 162, 255);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(107, 57, 243);
+}
+
+/* Styling for content direction class */
+.content-direction {
+    background-color: rgb(245, 234, 234);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Styling for tables used for contact and education information */
+.contact-table,
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.contact-table td,
+.education-table td,
+.education-table th,
+.contact-name {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.education-table th,
+.contact-name {
+    background-color: #f35517;
+    color: white;
+}
+
+/* Styling for skill list */
+.skill-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-list li {
+    background-color: #f35517;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 12px;
+}
+
+/* Styling for images and videos */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.video-frame {
+    border: 2px solid #000;
+    /* Black border */
+    margin: 20px;
+    /* Margin around the iframe */
+    box-shadow: 0px 0px 10px #888888;
+    /* Shadow effect */
+}
+
+
+/* Media queries for responsiveness */
+
+/* Small screens (phones) */
+@media only screen and (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 0.8rem;
+        font-size: 1rem;
+    }
+
+
+}
+
+/* Medium screens (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    main {
+        font-size: 0.9em;
+    }
+}
+
+/* Large screens (desktops) */
+@media only screen and (min-width: 1025px) {
+    main {
+        margin: 50px auto;
+    }
+}
+
+/* Styling for form elements */
+form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+form:hover {
+    transform: scale(1.2);
+}
+
+/* Styling for input and textarea elements */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 90%;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Focus state for input and textarea */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #f35517;
+    box-shadow: 0 0 8px rgba(243, 85, 23, 0.6);
+    outline: none;
+}
+
+/* Styling for submit button */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f35517;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #e03e10;
+}
+
+
+/* Adding animations to nav links */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-links li {
+    animation: navLinkFade 0.5s ease-in-out forwards;
+}
+
+/* Delaying animation for each nav link */
+.nav-links li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.nav-links li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.nav-links li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.nav-links li:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.nav-links li:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.gallery-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery-item {
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 300px;
+    /* Fixed width for all images */
+    height: 200px;
+    /* Fixed height for all images */
+    object-fit: cover;
+    /* Ensures the image covers the area without distorting the aspect ratio */
+    border-radius: 10px;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.time {
+    color: #ff5e00;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 1em;
+}
